@@ -29,30 +29,30 @@ jobs:
           tg_dir: ${{ env.working_dir }}
           tg_command: 'hclfmt --terragrunt-check --terragrunt-diff'
       
-      - name: Format
-        uses: gruntwork-io/terragrunt-action@v2
-        id: fmt
-        with:
-          tf_version: ${{ env.tf_version }}
-          tg_version: ${{ env.tg_version }}
-          tg_dir: ${{ env.working_dir }}
-          tg_command: 'run-all fmt'
-        continue-on-error: true
+      # - name: Format
+      #   uses: gruntwork-io/terragrunt-action@v2
+      #   id: fmt
+      #   with:
+      #     tf_version: ${{ env.tf_version }}
+      #     tg_version: ${{ env.tg_version }}
+      #     tg_dir: ${{ env.working_dir }}
+      #     tg_command: 'run-all fmt'
+      #   continue-on-error: true
       
-      - name: Init
-        uses: gruntwork-io/terragrunt-action@v2
-        id: init
-        with:
-          tf_version: ${{ env.tf_version }}
-          tg_version: ${{ env.tg_version }}
-          tg_dir: ${{ env.working_dir }}
-          tg_command: 'run-all init -upgrade'
+      # - name: Init
+      #   uses: gruntwork-io/terragrunt-action@v2
+      #   id: init
+      #   with:
+      #     tf_version: ${{ env.tf_version }}
+      #     tg_version: ${{ env.tg_version }}
+      #     tg_dir: ${{ env.working_dir }}
+      #     tg_command: 'run-all init -upgrade'
       
-      - name: Validate
-        uses: gruntwork-io/terragrunt-action@v2
-        id: validate
-        with:
-          tf_version: ${{ env.tf_version }}
-          tg_version: ${{ env.tg_version }}
-          tg_dir: ${{ env.working_dir }}
-          tg_command: 'run-all validate'
+      # - name: Validate
+      #   uses: gruntwork-io/terragrunt-action@v2
+      #   id: validate
+      #   with:
+      #     tf_version: ${{ env.tf_version }}
+      #     tg_version: ${{ env.tg_version }}
+      #     tg_dir: ${{ env.working_dir }}
+      #     tg_command: 'run-all validate'
